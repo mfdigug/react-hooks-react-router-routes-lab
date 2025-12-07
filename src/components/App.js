@@ -5,7 +5,7 @@ import Home from "./Home";
 import Actors from "./Actors";
 import Directors from "./Directors";
 import Movies from "./Movies";
-import { movies } from "../data";
+import { movies, directors, actors } from "../data";
 
 function App() {
   return <div>
@@ -15,10 +15,10 @@ function App() {
         <Home />
       </Route> 
       <Route path="/actors">
-        <Actors />
+        <Actors actors={actors}/>
       </Route> 
       <Route path="/directors"> 
-        <Directors />
+        <Directors directors={directors}/>
       </Route>
       <Route path="/movies"> 
         <Movies movies={movies} />
