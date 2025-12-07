@@ -1,10 +1,9 @@
 
 function Movies( { movies } ) {
- console.log(movies)
- 
+
   const movieList = movies.map((movie) => {
    return(
-    <div key={movie.title} >    
+    <div key={movie.title}>    
       <h2>{movie.title}</h2>
       <p>Time: {movie.time} minutes </p>
       <p>Genres: </p>
