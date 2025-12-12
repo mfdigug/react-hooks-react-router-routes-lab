@@ -7,6 +7,11 @@ import Directors from "./Directors";
 import Movies from "./Movies";
 import { movies, directors, actors } from "../data";
 
+const moviesData = movies;
+const directorsData = directors;
+const actorsData = actors;
+
+
 function App() {
   return <div>
     <NavBar />
@@ -15,13 +20,13 @@ function App() {
         <Home />
       </Route> 
       <Route path="/actors">
-        <Actors actors={actors}/>
+        <Actors actorsData={actorsData}/>
       </Route> 
       <Route path="/directors"> 
-        <Directors directors={directors}/>
+        <Directors directors={directorsData}/>
       </Route>
       <Route path="/movies"> 
-        <Movies movies={movies} />
+        <Movies movies={moviesData} />
       </Route>
     </Switch>
   </div>;

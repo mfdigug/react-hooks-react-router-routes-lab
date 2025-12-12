@@ -1,8 +1,7 @@
-import React from "react";
 import { NavLink } from "react-router-dom";
 
 function NavBar() {
-  return <nav>
+  return <nav className="navbar">
     <ul>
       <li>
       <NavLink
@@ -14,16 +13,18 @@ function NavBar() {
       Home
       </NavLink>
       </li>
+      
       <li>
       <NavLink 
-      to="/actors"
+      to="/movies"
       exact 
       activeStyle={{
         background: "lightblue"
       }}>
-        Actors
+        Movies
       </NavLink>
       </li>
+
       <li> 
       <NavLink 
       to="/directors"
@@ -34,14 +35,15 @@ function NavBar() {
         Directors
       </NavLink>
       </li>
+      
       <li>
       <NavLink 
-      to="/movies"
+      to="/actors"
       exact 
       activeStyle={{
         background: "lightblue"
       }}>
-        Movies
+        Actors
       </NavLink>
       </li>
     </ul>

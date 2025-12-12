@@ -1,8 +1,11 @@
 
-function Directors({ directors }) {
-  
-  const directorsList = directors.map((director) => (
-    <div key={director.name}>
+function Directors({ directorsData }) {
+
+  return (
+    <div>
+     <h1>Directors Page</h1>
+     {directorsData && directorsData.map((director) => (
+      <div key={director.name}>
       <h2>{director.name}</h2>
       <p>Movies:</p>
       <ul>
@@ -11,13 +14,8 @@ function Directors({ directors }) {
         ))}
       </ul>
     </div>
-  ));
-
-  return (
-    <>
-     <h1>Directors Page</h1>
-     {directorsList}
-    </>
+  ))}
+  </div>
   )
 }
 

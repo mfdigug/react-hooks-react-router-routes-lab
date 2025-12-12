@@ -1,8 +1,12 @@
 
 
-function Actors({ actors }) {
+function Actors({ actorsData }) {
   
-  const actorsList = actors.map((actor) => (
+  return(
+    <div>
+    <h1>Actors Page</h1>
+    {actorsData && actorsData.map((actor) => (
+    console.log(actor),
     <div key={actor.name}>
       <h2>{actor.name}</h2>
       <p>Movies:</p>
@@ -12,13 +16,8 @@ function Actors({ actors }) {
         ))}
       </ul>
     </div>
-  ))
-  
-  return(
-    <>
-    <h1>Actors</h1>
-    {actorsList}
-    </>
+  ))}
+    </div>
   ) 
 }
 

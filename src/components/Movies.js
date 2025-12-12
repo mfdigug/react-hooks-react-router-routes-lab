@@ -1,8 +1,12 @@
 
-function Movies( { movies } ) {
 
-  const movieList = movies.map((movie) => {
-   return(
+function Movies( { moviesData } ) {
+
+  return( 
+  <div>
+    <h1>Movies Page</h1>
+    {moviesData && moviesData.map((movie) => {
+    return(
     <div key={movie.title}>    
       <h2>{movie.title}</h2>
       <p>Time: {movie.time} minutes </p>
@@ -15,12 +19,8 @@ function Movies( { movies } ) {
     </div>
    )
   })
-
-  return( 
-  <>
-    <h1>Movies</h1>
-    {movieList}
-  </>
+  }
+  </div>
   )
 }
 
